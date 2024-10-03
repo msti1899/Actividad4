@@ -11,13 +11,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_check = "SELECT 1 FROM usuarios WHERE nombre = '$nombre' OR apellido = '$apelldio' OR nombre_user = '$nombre_user' OR email = '$email' OR numero_telefono = '$numero_telefono'";
     $resultado = $conexion->query($sql_check);
 
+
+ 
+
+
+    }
+
     if ($resultado->num_rows > 0) {
         header("Location: rechazar.php");
         exit();
-    }
+      
+        }
+
+        $sql_insert = "INSERT INTO usuarios (nombre, apellido, nombre_user, email, numero_telefono) VALUES ('$nombre', '$apelldio', '$nombre_user', '$email', '$numero_telefono')";
+
+
+
+        if ($conexion->query($sql_insert) === TRUE) {
+            header("Location: confirmar.php");
+            exit();
+        }
+
+
+
+        $conexion->close();
+
+    
 
 
 
 
   
-}  
+

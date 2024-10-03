@@ -1,4 +1,15 @@
-body{
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(font/Montserrat.ttf);
+}
+body
+{
 background-color: rgb(51, 162, 199);
 
 }
@@ -15,3 +26,4 @@ h1:first-child{
 h1:last-child{
     font-weight: 100;
 }
+
