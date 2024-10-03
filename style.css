@@ -2,11 +2,17 @@ body{
 background-color: rgb(51, 162, 199);
 
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 nav{
 width: 100%;
 text-align: center;
 color: rgb(0, 0, 0);
-display: flex;
+
 gap: 10px;
 }
 h1:first-child{
@@ -14,4 +20,30 @@ h1:first-child{
 }
 h1:last-child{
     font-weight: 100;
+}
+article{
+    width: 50%;
+    outline: 1px solid black;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+
+}
+img{
+    position: absolute;
+    right: 20PX;
+    left: 20PX;
+    z-index: -1;
+    width: 1280PX;
+}
+section{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
