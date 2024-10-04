@@ -12,8 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_check = "SELECT 1 FROM usuarios WHERE nombre = '$nombre' OR apellido = '$apellido' OR nombre_user = '$nombre_user' OR email = '$email' OR numero_telefono = '$numero_telefono'";
     $resultado = $conexion->query($sql_check);
 
-
- 
+    
 
 
     }
